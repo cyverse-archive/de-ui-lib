@@ -11,11 +11,13 @@ import intlData from "./messages";
 import DEDialogHeader from "./DEDialogHeader";
 import withI18N, { getMessage } from "../I18NWrapper";
 
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import TextField from "@material-ui/core/TextField";
+import {
+    Button,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    TextField,
+} from "@material-ui/core";
 
 class DEPromptDialog extends Component {
     constructor(props) {

@@ -7,8 +7,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Rating from "@material-ui/lab/Rating";
 
-import IconButton from "@material-ui/core/IconButton";
-import { Tooltip, withStyles } from "@material-ui/core";
+import { Tooltip, withStyles, IconButton } from "@material-ui/core";
 
 import DeleteIcon from "@material-ui/icons/Delete";
 

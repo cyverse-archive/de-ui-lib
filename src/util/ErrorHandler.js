@@ -7,19 +7,22 @@ import messages from "./messages";
 import styles from "./style";
 import withI18N, { getMessage } from "./I18NWrapper";
 
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogTitle from "@material-ui/core/DialogTitle";
 import ErrorIcon from "@material-ui/icons/Error";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import { withStyles } from "@material-ui/core/styles";
+
+import {
+    Button,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogTitle,
+    ExpansionPanel,
+    ExpansionPanelSummary,
+    ExpansionPanelDetails,
+    withStyles,
+} from "@material-ui/core";
 
 class ErrorHandler extends Component {
     constructor(props) {

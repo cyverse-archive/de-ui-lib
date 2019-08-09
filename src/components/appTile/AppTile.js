@@ -15,11 +15,8 @@ import palette from "../../util/CyVersePalette";
 import Rate from "../rating/Rate";
 import withI18N, { formatMessage } from "../../util/I18NWrapper";
 
-import IconButton from "@material-ui/core/IconButton";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import Menu from "@material-ui/core/Menu";
-import Paper from "@material-ui/core/Paper";
-import { withStyles } from "@material-ui/core";
+import { withStyles, IconButton, Menu, Paper } from "@material-ui/core";
 
 const styles = (theme) => ({
     card: {

@@ -8,15 +8,18 @@ import { getIn } from "formik";
 import build from "./DebugIDUtil";
 import Autocomplete from "../components/autocomplete/Autocomplete";
 
-import Checkbox from "@material-ui/core/Checkbox";
-import FormControl from "@material-ui/core/FormControl";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormHelperText from "@material-ui/core/FormHelperText";
-import InputLabel from "@material-ui/core/InputLabel";
-import Select from "@material-ui/core/Select";
-import TableCell from "@material-ui/core/TableCell";
-import TextField from "@material-ui/core/TextField";
 import { formatDateObject } from "./DateFormatter";
+
+import {
+    Checkbox,
+    FormControl,
+    FormControlLabel,
+    FormHelperText,
+    InputLabel,
+    Select,
+    TableCell,
+    TextField,
+} from "@material-ui/core";
 
 const getFormError = (name, touched, errors) => {
     const error = getIn(errors, name);

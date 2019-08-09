@@ -11,10 +11,12 @@ import build from "../DebugIDUtil";
 import withI18N, { getMessage } from "../I18NWrapper";
 import DEDialogHeader from "./DEDialogHeader";
 
-import Dialog from "@material-ui/core/Dialog/Dialog";
-import DialogContent from "@material-ui/core/DialogContent/DialogContent";
-import Button from "@material-ui/core/Button/Button";
-import DialogActions from "@material-ui/core/DialogActions/DialogActions";
+import {
+    Dialog,
+    DialogContent,
+    Button,
+    DialogActions,
+} from "@material-ui/core";
 
 export const TWO_BUTTON_VARIANT = "twoButtonVariant";
 export const THREE_BUTTON_VARIANT = "threeButtonVariant";

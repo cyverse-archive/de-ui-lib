@@ -6,13 +6,16 @@ import styles from "./style";
 import withI18N, { getMessage } from "./I18NWrapper";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import PropTypes from "prop-types";
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/core/styles";
+
+import {
+    ExpansionPanel,
+    ExpansionPanelSummary,
+    ExpansionPanelDetails,
+    Typography,
+    withStyles,
+} from "@material-ui/core";
 
 function ErrorExpansionPanel(props) {
     const { errMsg, username, userAgent, date, host, classes } = props;

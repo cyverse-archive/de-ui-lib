@@ -5,8 +5,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { copySelection, hasClipboardAPI } from "./clipboardFunctions";
 
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
+import { Button, TextField } from "@material-ui/core";
 
 class CopyTextArea extends Component {
     constructor(props) {

@@ -5,10 +5,9 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Chip from "@material-ui/core/Chip";
 import PublicIcon from "@material-ui/icons/Public";
 import LockIcon from "@material-ui/icons/Lock";
-import { withStyles } from "@material-ui/core/styles";
+import { Chip, withStyles } from "@material-ui/core";
 
 const styles1 = (theme) => ({
     chip: {

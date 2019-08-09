@@ -7,8 +7,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import LoadingOverlay from "react-loading-overlay";
 import palette from "../../util/CyVersePalette";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import { withStyles } from "@material-ui/core/styles";
+import { CircularProgress, withStyles } from "@material-ui/core";
 
 const style1 = (theme) => ({
     loading: {

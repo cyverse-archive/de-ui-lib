@@ -11,12 +11,14 @@ import { injectIntl } from "react-intl";
 import withI18N, { getMessage } from "../I18NWrapper";
 import intlData from "./messages";
 
-import Button from "@material-ui/core/Button";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import Dialog from "@material-ui/core/Dialog";
 import DEDialogHeader from "./DEDialogHeader";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogActions from "@material-ui/core/DialogActions";
+import {
+    Button,
+    DialogContentText,
+    Dialog,
+    DialogContent,
+    DialogActions,
+} from "@material-ui/core";
 
 DEAlertDialog.propTypes = {
     dialogOpen: PropTypes.bool.isRequired,

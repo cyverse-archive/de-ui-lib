@@ -13,7 +13,7 @@ import MenuItem from "@material-ui/core/MenuItem/index";
 import Select, { Creatable } from "react-select";
 import TextField from "@material-ui/core/TextField/index";
 import Typography from "@material-ui/core/Typography/index";
-import { withStyles } from "@material-ui/core/styles/index";
+import { withStyles } from "@material-ui/core";
 
 /**
  * @author aramsey

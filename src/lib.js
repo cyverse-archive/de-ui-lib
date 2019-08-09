@@ -58,7 +58,9 @@ import EnhancedTableHead from "./util/table/EnhancedTableHead";
 import TablePaginationActions from "./util/table/TablePaginationActions";
 import { stableSort, getSorting } from "./util/table/TableSort";
 
-import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+
+import { createMuiTheme } from "@material-ui/core";
 
 const getMuiTheme = (theme) =>
     createMuiTheme({
