@@ -43,7 +43,7 @@ class CopyTextArea extends Component {
     }
 
     render() {
-        const { multiline, text, debugIdPrefix } = this.props;
+        const { multiline, text, debugIdPrefix, margin="normal" } = this.props;
         return (
             <div>
                 <TextField
@@ -51,7 +51,7 @@ class CopyTextArea extends Component {
                     value={text}
                     multiline={multiline}
                     readOnly="readonly"
-                    margin="normal"
+                    margin={margin}
                     style={{ width: "100%" }}
                 />
                 {hasClipboardAPI() && (
