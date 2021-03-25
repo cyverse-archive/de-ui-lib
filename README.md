@@ -36,5 +36,22 @@ Generally:
 -   `minor` is used when you add functionality in a backwards-compatible manner.
 -   `major` is used when you make incompatible changes
 
+### `git push --tags`
+
+After pushing the version bump created with `npm version`,
+you'll need to also push the new version's tag.
+The `git push` command will only push the file changes created by `npm version`,
+but it will not push tags.
+
+In order to add the new tag to the public repo,
+you can use the command `git push --tags`.
+This will push all tags in your local repo to the public repo
+(if they're not already there).
+
+If you have other local tags that you don't want to push to the public repo,
+then you can push only the tag created by `npm version` with a command like
+`git push origin <new-tag-name>`;
+or if you've named your local fork of the public repo `upstream`, then
+`git push upstream <new-tag-name>`.
 
 (This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).)
