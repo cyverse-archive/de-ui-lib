@@ -66,8 +66,8 @@ class CyVerseAnnouncer extends Component {
                 open={open}
                 duration={duration ? duration : TIMEOUT}
                 onClose={this.handleClose}
-                horizontal={horizontal ? horizontal : CENTER}
-                vertical={vertical ? vertical : TOP}
+                horizontal={horizontal ? horizontal : LEFT}
+                vertical={vertical ? vertical : BOTTOM}
                 CustomAction={CustomAction}
             />
         );
