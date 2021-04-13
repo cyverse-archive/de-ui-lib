@@ -3,6 +3,7 @@
  * @type {number}
  */
 export const TIMEOUT = 6000;
+export const EMPTY_QUEUE_TIMEOUT = 1000;
 
 /**
  * A vertical position variant enum that will display messages on top of the screen.

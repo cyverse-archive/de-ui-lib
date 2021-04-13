@@ -6,7 +6,13 @@
 
 import React, { Component } from "react";
 import Announcer from "./Announcer";
-import { TIMEOUT, CENTER, TOP, INFO } from "./AnnouncerConstants";
+import {
+    EMPTY_QUEUE_TIMEOUT,
+    TIMEOUT,
+    LEFT,
+    BOTTOM,
+    INFO,
+} from "./AnnouncerConstants";
 
 let msgQueue = [];
 
@@ -34,6 +40,15 @@ class CyVerseAnnouncer extends Component {
     dequeue = () => {
         if (msgQueue.length > 0) {
             this.setState({ msg: msgQueue.shift(), open: true });
+            if (msgQueue.length === 0) {
+                clearInterval(this.state.timer);
+                let timer = setInterval(this.tickCallback, EMPTY_QUEUE_TIMEOUT);
+                this.setState({ timer });
+            } else {
+                clearInterval(this.state.timer);
+                let timer = setInterval(this.tickCallback, TIMEOUT);
+                this.setState({ timer });
+            }
         }
     };
 
