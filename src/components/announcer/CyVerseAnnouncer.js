@@ -23,6 +23,7 @@ class CyVerseAnnouncer extends Component {
             timer: null,
             msg: "",
             open: false,
+            timeout: TIMEOUT,
         };
     }
 
@@ -40,14 +41,17 @@ class CyVerseAnnouncer extends Component {
     dequeue = () => {
         if (msgQueue.length > 0) {
             this.setState({ msg: msgQueue.shift(), open: true });
-            if (msgQueue.length === 0) {
+            if (
+                msgQueue.length === 0 &&
+                this.state.timeout !== EMPTY_QUEUE_TIMEOUT
+            ) {
                 clearInterval(this.state.timer);
                 let timer = setInterval(this.tickCallback, EMPTY_QUEUE_TIMEOUT);
-                this.setState({ timer });
-            } else {
+                this.setState({ timer, timeout: EMPTY_QUEUE_TIMEOUT });
+            } else if (this.state.timeout !== TIMEOUT) {
                 clearInterval(this.state.timer);
                 let timer = setInterval(this.tickCallback, TIMEOUT);
-                this.setState({ timer });
+                this.setState({ timer, timeout: TIMEOUT });
             }
         }
     };
