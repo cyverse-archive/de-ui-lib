@@ -46,6 +46,9 @@ export const TextField = () => {
     const helperText = text("Helper Text", "");
     const required = boolean("Required?", false);
     const loading = boolean("Loading Mask?", false);
+    const readOnly = boolean("Read Only?", false);
+
+    const inputProps = { readOnly };
 
     return (
         <TestForm required={required} initialValue="">
@@ -55,6 +58,7 @@ export const TextField = () => {
                 label={label}
                 helperText={helperText}
                 required={required}
+                inputProps={inputProps}
             />
         </TestForm>
     );
@@ -64,6 +68,9 @@ export const MultilineTextField = () => {
     const label = text("Label", "Multiline Text Field Label");
     const helperText = text("Helper Text", "");
     const required = boolean("Required?", false);
+    const readOnly = boolean("Read Only?", false);
+
+    const inputProps = { readOnly };
 
     return (
         <TestForm required={required} initialValue="">
@@ -73,6 +80,7 @@ export const MultilineTextField = () => {
                 label={label}
                 helperText={helperText}
                 required={required}
+                inputProps={inputProps}
             />
         </TestForm>
     );
@@ -82,6 +90,9 @@ export const IntegerField = () => {
     const label = text("Label", "Integer Field Label");
     const helperText = text("Helper Text", "");
     const required = boolean("Required?", false);
+    const readOnly = boolean("Read Only?", false);
+
+    const inputProps = { readOnly };
 
     return (
         <TestForm required={required} initialValue="">
@@ -91,6 +102,7 @@ export const IntegerField = () => {
                 label={label}
                 helperText={helperText}
                 required={required}
+                inputProps={inputProps}
             />
         </TestForm>
     );
@@ -100,6 +112,9 @@ export const NumberField = () => {
     const label = text("Label", "Number Field Label");
     const helperText = text("Helper Text", "");
     const required = boolean("Required?", false);
+    const readOnly = boolean("Read Only?", false);
+
+    const inputProps = { readOnly };
 
     return (
         <TestForm required={required} initialValue="">
@@ -109,6 +124,7 @@ export const NumberField = () => {
                 label={label}
                 helperText={helperText}
                 required={required}
+                inputProps={inputProps}
             />
         </TestForm>
     );
@@ -118,6 +134,9 @@ export const SelectField = () => {
     const label = text("Label", "Select Field Label");
     const helperText = text("Helper Text", "");
     const required = boolean("Required?", false);
+    const readOnly = boolean("Read Only?", false);
+
+    const inputProps = { readOnly };
 
     return (
         <TestForm required={required} initialValue="">
@@ -127,6 +146,7 @@ export const SelectField = () => {
                 label={label}
                 helperText={helperText}
                 required={required}
+                inputProps={inputProps}
             >
                 <MenuItem value={1}>One</MenuItem>
                 <MenuItem value={2}>Two</MenuItem>
@@ -139,6 +159,9 @@ export const SelectField = () => {
 export const Checkbox = () => {
     const label = text("Label", "Checkbox Label");
     const helperText = text("Helper Text", "");
+    const readOnly = boolean("Read Only?", false);
+
+    const inputProps = { readOnly };
 
     return (
         <TestForm initialValue={true}>
@@ -147,6 +170,7 @@ export const Checkbox = () => {
                 name="test_field"
                 label={label}
                 helperText={helperText}
+                inputProps={inputProps}
             />
         </TestForm>
     );
@@ -155,6 +179,9 @@ export const Checkbox = () => {
 export const Switch = () => {
     const label = text("Label", "Switch Label");
     const helperText = text("Helper Text", "");
+    const readOnly = boolean("Read Only?", false);
+
+    const inputProps = { readOnly };
 
     return (
         <TestForm initialValue={true}>
@@ -163,6 +190,7 @@ export const Switch = () => {
                 name="test_field"
                 label={label}
                 helperText={helperText}
+                inputProps={inputProps}
             />
         </TestForm>
     );
@@ -171,6 +199,9 @@ export const Switch = () => {
 export const Timestamp = () => {
     const label = text("Label", "Timestamp Label");
     const helperText = text("Helper Text", "");
+    const readOnly = boolean("Read Only?", false);
+
+    const inputProps = { readOnly };
 
     return (
         <TestForm
@@ -184,6 +215,7 @@ export const Timestamp = () => {
                 name="test_field"
                 label={label}
                 helperText={helperText}
+                inputProps={inputProps}
             />
         </TestForm>
     );
