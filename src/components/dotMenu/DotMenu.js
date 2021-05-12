@@ -4,6 +4,10 @@
  *  A component which displays 3 vertical dots, which when
  *  clicked will display a menu.
  *
+ *  For a large screen, the users will see a Button with the 3 dots icon, plus
+ *  the supplied button text.
+ *  For a smaller screen, or if no text is provided, users will only see the icon.
+ *
  *  MenuItems should be passed into the render prop which in turn
  *  will provide a function for closing the menu.
  *
@@ -22,15 +26,29 @@
 
 import React, { useState } from "react";
 
-import { Menu, IconButton } from "@material-ui/core";
+import {
+    Button,
+    IconButton,
+    Menu,
+    useMediaQuery,
+    useTheme,
+} from "@material-ui/core";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 import build from "../../util/DebugIDUtil";
 
 function DotMenu(props) {
-    const { baseId, render, ButtonProps, MenuProps } = props;
+    const {
+        baseId,
+        render,
+        ButtonProps,
+        buttonText,
+        iconOnlyBreakpoint = "xs",
+        MenuProps,
+    } = props;
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
+    const theme = useTheme();
 
     const handleDotMenuClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -42,18 +60,26 @@ function DotMenu(props) {
 
     let menuId = build(baseId, "moreMenu");
 
+    const isIconButton =
+        useMediaQuery(theme.breakpoints.down(iconOnlyBreakpoint)) || !buttonText;
+
+    const Component = isIconButton ? IconButton : Button;
+
     return (
         <>
-            <IconButton
+            <Component
                 id={build(baseId, "dotMenuIcon")}
                 aria-controls={menuId}
                 aria-haspopup="true"
                 onClick={handleDotMenuClick}
                 size="small"
+                variant={isIconButton ? null : "outlined"}
+                color={isIconButton ? "default" : "primary"}
+                {...isIconButton ? null : { startIcon: <MoreVertIcon /> }}
                 {...ButtonProps}
             >
-                <MoreVertIcon />
-            </IconButton>
+                {isIconButton ? <MoreVertIcon /> : buttonText}
+            </Component>
             <Menu
                 id={menuId}
                 anchorEl={anchorEl}
