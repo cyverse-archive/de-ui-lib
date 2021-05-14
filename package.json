@@ -1,6 +1,6 @@
 {
     "name": "@cyverse-de/ui-lib",
-    "version": "7.1.0",
+    "version": "7.1.1",
     "private": false,
     "publishConfig": {
         "access": "public"
